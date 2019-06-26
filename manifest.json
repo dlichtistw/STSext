@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "STS Extensions",
-    "version": "0.1",
+    "version": "0.2",
     
     "description": "Some tools for the Stellwerksim.de pages.",
         
@@ -10,5 +10,11 @@
             "matches": [ "*://www.stellwerksim.de/anlagen.php*" ],
             "js": [ "anlagen.js" ]
         }
-    ]
+    ],
+    
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "stsext@dlichtistw"
+        }
+    }
 }
