@@ -75,7 +75,7 @@ function insertGlobalRegion() {
     thead.appendChild(th1);
 
     var th2 = rows[1].cloneNode(true);
-    th2.firstChild.textContent = "Erzeugt durch STS Tools";
+    th2.firstChild.textContent = "Erzeugt durch STSext";
     thead.appendChild(th2);
     
     table.insertBefore(thead, tbody);
