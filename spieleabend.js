@@ -48,6 +48,7 @@ function addSiteLinks() {
         var aid = m[1];
         var al = document.createElement("a");
         al.href = fmt + aid;
+        al.title = "Anlage ansehen";
         al.appendChild(document.createTextNode(s.firstChild.textContent));
         s.firstChild.replaceWith(al);
         
