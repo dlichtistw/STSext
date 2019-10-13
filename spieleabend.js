@@ -23,7 +23,7 @@ function log(t) {
 }
 
 /*
- * Add direct links to the site's description pages in game night subscription lists.
+ * Add direct links to the site's description pages in game night registration lists.
  */
 function addSiteLinks() {
     var re = /.*\/spieleabend.php(?=\?).*(?:\?|&)aid=([^?&]+)/i;
@@ -40,6 +40,7 @@ function addSiteLinks() {
             continue;
         }
         
+        // If there is a link to register for this site, then we are at the right place.
         var m = l.href.match(re);
         if (m == null) {
             continue;
