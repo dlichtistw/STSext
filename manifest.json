@@ -1,11 +1,15 @@
 {
     "manifest_version": 2,
     "name": "STS Extensions",
-    "version": "0.3.1",
+    "version": "0.4",
     
     "description": "Some extensions for the Stellwerksim.de pages.",
         
     "content_scripts": [
+        {
+            "matches": [ "*://www.stellwerksim.de/*" ],
+            "js": [ "general.js" ]
+        },
         {
             "matches": [ "*://www.stellwerksim.de/anlagen.php*" ],
             "js": [ "anlagen.js" ]
@@ -15,6 +19,12 @@
             "js": [ "spieleabend.js" ]
         }
     ],
+    
+    "options_ui": {
+        "page": "options.html"
+    },
+    
+    "permissions": [ "storage" ],
     
     "browser_specific_settings": {
         "gecko": {

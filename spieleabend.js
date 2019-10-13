@@ -59,4 +59,13 @@ function addSiteLinks() {
     log(count + " site links added.");
 }
 
-addSiteLinks();
+/*
+ * Enable extension functions depending on selected options.
+ */
+function useOptions( options ) {
+    log( "Using options." );
+    if ( options.gameNightRegistration ) {
+        addSiteLinks();
+    }
+}
+browser.storage.local.get().then( useOptions, log );

@@ -312,5 +312,14 @@ function makeGlobalSortable() {
     return true;
 }
 
-addOverview();
-makeGlobalSortable();
+/*
+ * Enable extension functions depending on selected options.
+ */
+function useOptions( options ) {
+    log( "Using options." );
+    if ( options.globalOverview ) {
+        addOverview();
+        makeGlobalSortable();
+    }
+}
+browser.storage.local.get().then( useOptions, log );
