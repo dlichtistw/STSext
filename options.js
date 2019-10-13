@@ -49,7 +49,7 @@ function restoreOptions() {
     }
     
     var getting = browser.storage.local.get( {
-        globalOVerview: true,
+        globalOverview: true,
         gameNightRegistration: true,
         rewriteDownload: true,
     } );
