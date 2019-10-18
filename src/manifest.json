@@ -2,6 +2,8 @@
     "manifest_version": 2,
     "name": "STS Extensions",
     "version": "0.4.1",
+    "author": "David Lichti",
+    "homepage_url": "https://github.com/dlichtistw/STSext",
     
     "description": "Some extensions for the Stellwerksim.de pages.",
         
