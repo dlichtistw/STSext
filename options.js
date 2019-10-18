@@ -49,9 +49,9 @@ function restoreOptions() {
     }
     
     var getting = browser.storage.local.get( {
-        globalOverview: true,
-        gameNightRegistration: true,
-        rewriteDownload: true,
+        globalOverview: false,
+        gameNightRegistration: false,
+        rewriteDownload: false,
     } );
     getting.then( setConfig, onError );
 }

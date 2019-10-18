@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  * Write some text to the console log.
  */
 function log(t) {
-    return console.log("[STSext] " + t);
+    return console.log(`[STSext] ${t}`);
 }
 
 /*
