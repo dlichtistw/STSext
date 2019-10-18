@@ -14,6 +14,6 @@ Otherwise, feel free to fork the repository.
 ## License
 
 This project is licensed unter the GPLv3 License.
-See [LICENSE.md](LICENSE.md) for details.
+See [LICENSE](LICENSE) for details.
 
 [1]: https://www.stellwerksim.de/
