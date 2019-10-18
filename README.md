@@ -4,6 +4,7 @@ Firefox extension for use on [StellwerkSim.de][1].
 Note that this is made *for*, but *not by* StellwerkSim.
 
 ## Installation
+
 Download the packaged and signed `sts_extensions-*.xpi` file and install it in your browser.
 
 ## Contributing
