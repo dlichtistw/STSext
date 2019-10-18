@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "STS Extensions",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "author": "David Lichti",
     "homepage_url": "https://github.com/dlichtistw/STSext",
     
