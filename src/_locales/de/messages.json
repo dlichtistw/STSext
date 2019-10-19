@@ -1,0 +1,47 @@
+{
+    "extensionName": {
+        "message": "STS Erweiterungen",
+        "description": "The extension's name"
+    },
+    "extensionDescription": {
+        "message": "Ein paar nützliche veränderungen an StellwerkSim.de",
+        "description": "The extension's description"
+    },
+
+    "sites/globalOverview": {
+        "message": "Gesamtübersicht",
+        "description": "List containing all the playable sites"
+    },
+    "sites/credits": {
+        "message": "Generiert von STSext",
+        "description": "Where the modified elements come from"
+    },
+    "sites/overview": {
+        "message": "Übersicht"
+    },
+    "sites/sortCmd": {
+        "message": "sortieren",
+        "description": "Active column title for sortable columns"
+    },
+
+    "general/downloadLinkTitle": {
+        "message": "STS-JNLP-Datei herunterladen"
+    },
+
+    "gameNights/siteLinkTitle": {
+        "message": "Zur Beschreibung von $1."
+    },
+
+    "options/globalOverview": {
+        "message": "Gesamtübersicht aller Anlagen erzeugen:"
+    },
+    "options/gameNightRegistration": {
+        "message": "Anlagenbeschreibungen auf der Anmeldeseite für Spieleabende verlinken:"
+    },
+    "options/rewriteDownload": {
+        "message": "Direkter Download-Link:"
+    },
+    "options/saveButton": {
+        "message": "Speichern"
+    }
+}

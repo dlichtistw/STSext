@@ -71,11 +71,11 @@ function insertGlobalRegion() {
     var thead = document.createElement("thead");
 
     var th1 = rows[0].cloneNode(true);
-    th1.firstChild.textContent = "Globale Übersicht";
+    th1.firstChild.textContent = browser.i18n.getMessage("sites/globalOverview");
     thead.appendChild(th1);
 
     var th2 = rows[1].cloneNode(true);
-    th2.firstChild.textContent = "Erzeugt durch STSext";
+    th2.firstChild.textContent = browser.i18n.getMessage("sites/credits");
     thead.appendChild(th2);
     
     table.insertBefore(thead, tbody);
@@ -150,7 +150,7 @@ function addAllAll() {
     var navbox = template.cloneNode(false);
 
     var navlink = document.createElement("a");
-    navlink.textContent = "Übersicht";
+    navlink.textContent = browser.i18n.getMessage("sites/overview");
     navlink.addEventListener("click", toggleGlobalRegion);
     navbox.appendChild(navlink);
 
@@ -201,7 +201,7 @@ function createActionLink(text) {
  */
 function makeSortable(table) {
     var ns = document.createElement("th");
-    var nsl = createActionLink("sortieren");
+    var nsl = createActionLink(browser.i18n.getMessage("sites/sortCmd"));
     nsl.addEventListener("click", function(e) {
         tg = e.target;
         if (tg.classList.contains("sort_asc")) {
@@ -217,7 +217,7 @@ function makeSortable(table) {
     ns.appendChild(nsl);
     
     var ds = document.createElement("th");
-    var dsl = createActionLink("sortieren");
+    var dsl = createActionLink(browser.i18n.getMessage("sites/sortCmd"));
     dsl.addEventListener("click", function(e) {
         tg = e.target;
         if (tg.classList.contains("sort_asc")) {

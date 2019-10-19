@@ -48,9 +48,10 @@ function addSiteLinks() {
         
         var aid = m[1];
         var al = document.createElement("a");
+        var siteName = s.firstChild.textContent;
         al.href = fmt + aid;
-        al.title = "Anlage ansehen";
-        al.appendChild(document.createTextNode(s.firstChild.textContent));
+        al.title = browser.i18n.getMessage("gameNights/siteLinkTitle", siteName);
+        al.appendChild(document.createTextNode(siteName));
         s.firstChild.replaceWith(al);
         
         count++;
