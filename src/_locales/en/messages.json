@@ -41,6 +41,9 @@
     "options/rewriteDownload": {
         "message": "Rewrite download button:"
     },
+    "options/appeaseDownloadButton": {
+        "message": "Disable download button animation:"
+    },
     "options/shortenDelays": {
         "message": "Adjust delays in navigation menu bar:"
     },

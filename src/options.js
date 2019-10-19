@@ -31,6 +31,7 @@ function saveOptions( e ) {
         globalOverview: document.querySelector("#globalOverview").checked,
         gameNightRegistration: document.querySelector("#gameNightRegistration").checked,
         rewriteDownload: document.querySelector("#rewriteDownload").checked,
+        appeaseDownloadButton: document.querySelector("#appeaseDownloadButton").checked,
         shortenDelays: document.querySelector("#shortenDelays").checked,
         delayShow: document.querySelector("#delayShow").value,
         delayHide: document.querySelector("#delayHide").value
@@ -45,6 +46,7 @@ function restoreOptions() {
         document.querySelector("#globalOverview").checked = result.globalOverview;
         document.querySelector("#gameNightRegistration").checked = result.gameNightRegistration;
         document.querySelector("#rewriteDownload").checked = result.rewriteDownload;
+        document.querySelector("#appeaseDownloadButton").checked = result.appeaseDownloadButton;
         document.querySelector("#shortenDelays").checked = result.shortenDelays;
         document.querySelector("#delayShow").value = result.delayShow;
         document.querySelector("#delayHide").value = result.delayHide;
@@ -58,6 +60,7 @@ function restoreOptions() {
         globalOverview: false,
         gameNightRegistration: false,
         rewriteDownload: false,
+        appeaseDownloadButton: false,
         shortenDelays: false,
         delayShow: 100,
         delayHide: 200

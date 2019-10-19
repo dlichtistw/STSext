@@ -23,16 +23,25 @@ function log(t) {
 }
 
 /*
+ * Get the download button in the top right corner.
+ */
+function getDownloadButton() {
+    var dc = document.getElementsByClassName("download navlink");
+    if (dc.length > 0)
+        return dc[0];
+
+    log("Download button not found.");
+    return false;
+}
+
+/*
  * Rewrite the "Download" button to directly download the .jnlp file.
  */
 function rewriteDownload() {
     // Find the right button.
-    var dc = document.getElementsByClassName( "download navlink" );
-    if ( dc.length == 0 ) {
-        log( "Download link not found." );
+    var d = getDownloadButton();
+    if ( !d )
         return false;
-    }
-    var d = dc[0];
 
     // Redirect download.
     d.href = "/download-jnlp.php";
@@ -49,11 +58,11 @@ function adjustDelays( delayShow, delayHide ) {
     for ( elem of document.getElementsByClassName( "toplink" ) ) {
         // Inject code to access jQuery data from page context.
         elem.setAttribute( "onmouseover", `\
-var data = $( this ).data( 'options' );\
+var data = $( this ).data( "options" );\
 data.delay = ${delayShow};\
 data.minLifetime = ${delayHide};\
-$( this ).data( 'options', data );\
-this.removeAttribute( 'onmouseover' );\
+$( this ).data( "options", data );\
+this.removeAttribute( "onmouseover" );\
         ` );
 
         // Trigger injected code.
@@ -66,6 +75,20 @@ this.removeAttribute( 'onmouseover' );\
 }
 
 /*
+ * Remove download link animation.
+ */
+function appeaseDownloadButton() {
+    var d = getDownloadButton();
+    if ( !d )
+        return false;
+    
+    // Set some non-existant name.
+    d.style.animationName = "noAnimation";
+
+    log( "Download button appeased." );
+}
+
+/*
  * Enable extension functions depending on selected options.
  */
 function useOptions( options ) {
@@ -74,5 +97,7 @@ function useOptions( options ) {
         rewriteDownload();
     if ( options.shortenDelays )
         adjustDelays( options.delayShow, options.delayHide );
+    if ( options.appeaseDownloadButton )
+        appeaseDownloadButton();
 }
 browser.storage.local.get().then( useOptions, log );
