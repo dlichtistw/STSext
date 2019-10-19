@@ -2,7 +2,7 @@
 *.zip
 
 # Microsoft VS Code config files
-.vscode/launch.json
+.vscode/*
 *.code-workspace
 
 # Python cache and other files
