@@ -41,6 +41,9 @@
     "options/rewriteDownload": {
         "message": "Rewrite download button:"
     },
+    "options/shortenDelays": {
+        "message": "Shorten delays in navigation menu bar:"
+    },
     "options/saveButton": {
         "message": "Save"
     }

@@ -42,13 +42,34 @@ function rewriteDownload() {
     return true;
 }
 
+function shortenDelays() {
+    for ( elem of document.getElementsByClassName( "toplink" ) ) {
+        // Inject code to access jQuery data from page context.
+        elem.setAttribute( "onmouseover", "\
+var data = $( this ).data( 'options' );\
+data.delay = 0;\
+data.minLifetime = 200;\
+$( this ).data( 'options', data );\
+this.removeAttribute( 'onmouseover' );\
+        " );
+
+        // Trigger injected code.
+        elem.dispatchEvent( new MouseEvent( "mouseover" ) );
+        elem.dispatchEvent( new MouseEvent( "mouseout" ) );
+    }
+
+    log( "Navigation bar delays shortened." );
+    return true;
+}
+
 /*
  * Enable extension functions depending on selected options.
  */
 function useOptions( options ) {
     log( "Using options." );
-    if ( options.rewriteDownload ) {
+    if ( options.rewriteDownload )
         rewriteDownload();
-    }
+    if ( options.shortenDelays )
+        shortenDelays();
 }
 browser.storage.local.get().then( useOptions, log );

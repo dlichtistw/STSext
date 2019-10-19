@@ -30,7 +30,8 @@ function saveOptions( e ) {
     browser.storage.local.set( {
         globalOverview: document.querySelector("#globalOverview").checked,
         gameNightRegistration: document.querySelector("#gameNightRegistration").checked,
-        rewriteDownload: document.querySelector("#rewriteDownload").checked
+        rewriteDownload: document.querySelector("#rewriteDownload").checked,
+        shortenDelays: document.querySelector("#shortenDelays").checked
     } );
 }
 
@@ -42,6 +43,7 @@ function restoreOptions() {
         document.querySelector("#globalOverview").checked = result.globalOverview;
         document.querySelector("#gameNightRegistration").checked = result.gameNightRegistration;
         document.querySelector("#rewriteDownload").checked = result.rewriteDownload;
+        document.querySelector("#shortenDelays").checked = result.shortenDelays;
     }
     
     function onError( e ) {
@@ -52,6 +54,7 @@ function restoreOptions() {
         globalOverview: false,
         gameNightRegistration: false,
         rewriteDownload: false,
+        shortenDelays: false
     } );
     getting.then( setConfig, onError );
 }

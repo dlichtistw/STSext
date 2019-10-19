@@ -41,6 +41,9 @@
     "options/rewriteDownload": {
         "message": "Direkter Download-Link:"
     },
+    "options/shortenDelays": {
+        "message": "Verzögerungen in der Navigationsleiste verringern:"
+    },
     "options/saveButton": {
         "message": "Speichern"
     }
