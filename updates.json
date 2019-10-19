@@ -1,0 +1,48 @@
+{
+    "addons": {
+        "stsext@dlichtistw":  {
+            "updates": [
+                {
+                    "version": "0.6.1",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.6.1-fx.xpi"
+                },
+                {
+                    "version": "0.6",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.6-fx.xpi"
+                },
+                {
+                    "version": "0.5",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.5-fx.xpi"
+                },
+                {
+                    "version": "0.4.2",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.4.2-fx.xpi"
+                },
+                {
+                    "version": "0.4.1",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.4.1-fx.xpi"
+                },
+                {
+                    "version": "0.4",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.4-fx.xpi"
+                },
+                {
+                    "version": "0.3.1",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.3.1-fx.xpi"
+                },
+                {
+                    "version": "0.3",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.3-fx.xpi"
+                },
+                {
+                    "version": "0.2.1",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.2.1-fx.xpi"
+                },
+                {
+                    "version": "0.2",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.2-fx.xpi"
+                }
+            ]
+        }
+    }
+}
