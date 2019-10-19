@@ -42,23 +42,26 @@ function rewriteDownload() {
     return true;
 }
 
-function shortenDelays() {
+/*
+ * Adjust delays in navigation bar.
+ */
+function adjustDelays( delayShow, delayHide ) {
     for ( elem of document.getElementsByClassName( "toplink" ) ) {
         // Inject code to access jQuery data from page context.
-        elem.setAttribute( "onmouseover", "\
+        elem.setAttribute( "onmouseover", `\
 var data = $( this ).data( 'options' );\
-data.delay = 0;\
-data.minLifetime = 200;\
+data.delay = ${delayShow};\
+data.minLifetime = ${delayHide};\
 $( this ).data( 'options', data );\
 this.removeAttribute( 'onmouseover' );\
-        " );
+        ` );
 
         // Trigger injected code.
         elem.dispatchEvent( new MouseEvent( "mouseover" ) );
         elem.dispatchEvent( new MouseEvent( "mouseout" ) );
     }
 
-    log( "Navigation bar delays shortened." );
+    log( `Navigation bar delays adjusted to ${delayShow}ms and ${delayHide}ms.` );
     return true;
 }
 
@@ -70,6 +73,6 @@ function useOptions( options ) {
     if ( options.rewriteDownload )
         rewriteDownload();
     if ( options.shortenDelays )
-        shortenDelays();
+        adjustDelays( options.delayShow, options.delayHide );
 }
 browser.storage.local.get().then( useOptions, log );

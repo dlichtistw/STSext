@@ -42,7 +42,13 @@
         "message": "Direkter Download-Link:"
     },
     "options/shortenDelays": {
-        "message": "Verzögerungen in der Navigationsleiste verringern:"
+        "message": "Verzögerungen in der Navigationsleiste anpassen:"
+    },
+    "options/delayShow": {
+        "message": "Verzögerung beim Öffnen:"
+    },
+    "options/delayHide": {
+        "message": "Verzögerung beim Schließen:"
     },
     "options/saveButton": {
         "message": "Speichern"

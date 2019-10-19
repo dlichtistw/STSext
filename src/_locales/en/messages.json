@@ -42,7 +42,13 @@
         "message": "Rewrite download button:"
     },
     "options/shortenDelays": {
-        "message": "Shorten delays in navigation menu bar:"
+        "message": "Adjust delays in navigation menu bar:"
+    },
+    "options/delayShow": {
+        "message": "Opening delay:"
+    },
+    "options/delayHide": {
+        "message": "Closing delay:"
     },
     "options/saveButton": {
         "message": "Save"
