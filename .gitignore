@@ -1,2 +1,10 @@
-
+# Temporary packages
 *.zip
+
+# Microsoft VS Code config files
+.vscode/launch.json
+*.code-workspace
+
+# Python cache and other files
+__pycache__
+*.egg-info
