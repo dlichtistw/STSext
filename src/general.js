@@ -56,18 +56,18 @@ function rewriteDownload() {
  */
 function adjustDelays( delayShow, delayHide ) {
     for ( elem of document.getElementsByClassName( "toplink" ) ) {
-        // Inject code to access jQuery data from page context.
-        elem.setAttribute( "onmouseover", `\
-var data = $( this ).data( "options" );\
-data.delay = ${delayShow};\
-data.minLifetime = ${delayHide};\
-$( this ).data( "options", data );\
-this.removeAttribute( "onmouseover" );\
-        ` );
-
-        // Trigger injected code.
+        // Trigger creation of jQuery options
         elem.dispatchEvent( new MouseEvent( "mouseover" ) );
         elem.dispatchEvent( new MouseEvent( "mouseout" ) );
+
+        // jQuery is hidden from content scripts.
+        var jqObj = window.wrappedJSObject.jQuery( elem );
+
+        // Adjust delays
+        var opt = jqObj.data( "options" );
+        opt.delay = delayShow;
+        opt.minLifetime = delayHide;
+        jqObj.data( "options", opt );
     }
 
     log( `Navigation bar delays adjusted to ${delayShow}ms and ${delayHide}ms.` );
