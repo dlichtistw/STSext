@@ -3,7 +3,7 @@
 Firefox extension for use on [StellwerkSim.de][1].
 Note that this is made *for*, but *not by* StellwerkSim.
 
-As of v0.6.1, this extension provides the following adjustments:
+As of v0.6.2, this extension provides the following adjustments:
  * Generate a sortable overview of all playable sites.
  * Insert direct links to site descriptions on the game night reservation page.
  * Redirect the top right download button to a direct JNLP download.
@@ -23,7 +23,7 @@ They take effect after the StellwerkSim page has been reloaded.
 
 ## Contributing
 
-Contributions may be welcome, check out [CONTRIBUTING](CONTRIBUTING.md)
+Contributions may be welcome, check out [CONTRIBUTING](CONTRIBUTING.md).
 Otherwise, feel free to fork or clone the repository.
 
 ## License
