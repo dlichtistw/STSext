@@ -10,7 +10,7 @@
     
     "content_scripts": [
         {
-            "matches": [ "*://www.stellwerksim.de/*" ],
+            "matches": [ "*://www.stellwerksim.de/*", "*://doku.stellwerksim.de/*" ],
             "js": [ "general.js" ]
         },
         {
