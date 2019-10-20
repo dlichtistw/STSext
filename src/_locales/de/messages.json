@@ -8,52 +8,52 @@
         "description": "The extension's description"
     },
 
-    "sites/globalOverview": {
+    "sites_globalOverview": {
         "message": "Gesamtübersicht",
         "description": "List containing all the playable sites"
     },
-    "sites/credits": {
+    "sites_credits": {
         "message": "Generiert von STSext",
         "description": "Where the modified elements come from"
     },
-    "sites/overview": {
+    "sites_overview": {
         "message": "Übersicht"
     },
-    "sites/sortCmd": {
+    "sites_sortCmd": {
         "message": "sortieren",
         "description": "Active column title for sortable columns"
     },
 
-    "general/downloadLinkTitle": {
+    "general_downloadLinkTitle": {
         "message": "STS-JNLP-Datei herunterladen"
     },
 
-    "gameNights/siteLinkTitle": {
+    "gameNights_siteLinkTitle": {
         "message": "Zur Beschreibung von $1."
     },
 
-    "options/globalOverview": {
+    "options_globalOverview": {
         "message": "Gesamtübersicht aller Anlagen erzeugen:"
     },
-    "options/gameNightRegistration": {
+    "options_gameNightRegistration": {
         "message": "Anlagenbeschreibungen auf der Anmeldeseite für Spieleabende verlinken:"
     },
-    "options/rewriteDownload": {
+    "options_rewriteDownload": {
         "message": "Direkter Download-Link:"
     },
-    "options/appeaseDownloadButton": {
+    "options_appeaseDownloadButton": {
         "message": "Animation des Download-Kopfes deaktivieren:"
     },
-    "options/shortenDelays": {
+    "options_shortenDelays": {
         "message": "Verzögerungen in der Navigationsleiste anpassen:"
     },
-    "options/delayShow": {
+    "options_delayShow": {
         "message": "Verzögerung beim Öffnen:"
     },
-    "options/delayHide": {
+    "options_delayHide": {
         "message": "Verzögerung beim Schließen:"
     },
-    "options/saveButton": {
+    "options_saveButton": {
         "message": "Speichern"
     }
 }

@@ -45,7 +45,7 @@ function rewriteDownload() {
 
     // Redirect download.
     d.href = "/download-jnlp.php";
-    d.title = browser.i18n.getMessage("general/downloadLinkTitle");
+    d.title = browser.i18n.getMessage("general_downloadLinkTitle");
     
     log( "Download link redirected." );
     return true;
