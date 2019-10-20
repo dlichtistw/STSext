@@ -25,9 +25,10 @@ function log(t) {
 /*
  * Save current configuration to storage.
  */
-function saveOptions( e ) {
+function storeOptions( e ) {
     e.preventDefault();
-    browser.storage.local.set( {
+
+    return saveOptions( {
         globalOverview: document.querySelector("#globalOverview").checked,
         gameNightRegistration: document.querySelector("#gameNightRegistration").checked,
         rewriteDownload: document.querySelector("#rewriteDownload").checked,
@@ -36,6 +37,15 @@ function saveOptions( e ) {
         delayShow: document.querySelector("#delayShow").value,
         delayHide: document.querySelector("#delayHide").value
     } );
+    // browserObj().storage.local.set( {
+    //     globalOverview: document.querySelector("#globalOverview").checked,
+    //     gameNightRegistration: document.querySelector("#gameNightRegistration").checked,
+    //     rewriteDownload: document.querySelector("#rewriteDownload").checked,
+    //     appeaseDownloadButton: document.querySelector("#appeaseDownloadButton").checked,
+    //     shortenDelays: document.querySelector("#shortenDelays").checked,
+    //     delayShow: document.querySelector("#delayShow").value,
+    //     delayHide: document.querySelector("#delayHide").value
+    // } );
 }
 
 /*
@@ -51,22 +61,11 @@ function restoreOptions() {
         document.querySelector("#delayShow").value = result.delayShow;
         document.querySelector("#delayHide").value = result.delayHide;
     }
-    
-    function onError( e ) {
-        log( `Failed to load current options: ${e}` );
-    }
-    
-    var getting = browser.storage.local.get( {
-        globalOverview: false,
-        gameNightRegistration: false,
-        rewriteDownload: false,
-        appeaseDownloadButton: false,
-        shortenDelays: false,
-        delayShow: 100,
-        delayHide: 200
-    } );
-    getting.then( setConfig, onError );
+
+    return loadOptions( setConfig );
 }
 
+translateTree( document, "translate" );
+
 document.addEventListener( "DOMContentLoaded", restoreOptions );
-document.querySelector( "form" ).addEventListener( "submit", saveOptions );
+document.querySelector( "form" ).addEventListener( "submit", storeOptions );
