@@ -71,11 +71,11 @@ function insertGlobalRegion() {
     var thead = document.createElement("thead");
 
     var th1 = rows[0].cloneNode(true);
-    th1.firstChild.textContent = browser.i18n.getMessage("sites_globalOverview");
+    th1.firstChild.textContent = browserObj().i18n.getMessage("sites_globalOverview");
     thead.appendChild(th1);
 
     var th2 = rows[1].cloneNode(true);
-    th2.firstChild.textContent = browser.i18n.getMessage("sites_credits");
+    th2.firstChild.textContent = browserObj().i18n.getMessage("sites_credits");
     thead.appendChild(th2);
     
     table.insertBefore(thead, tbody);
@@ -150,7 +150,7 @@ function addAllAll() {
     var navbox = template.cloneNode(false);
 
     var navlink = document.createElement("a");
-    navlink.textContent = browser.i18n.getMessage("sites_overview");
+    navlink.textContent = browserObj().i18n.getMessage("sites_overview");
     navlink.addEventListener("click", toggleGlobalRegion);
     navbox.appendChild(navlink);
 
@@ -201,7 +201,7 @@ function createActionLink(text) {
  */
 function makeSortable(table) {
     var ns = document.createElement("th");
-    var nsl = createActionLink(browser.i18n.getMessage("sites_sortCmd"));
+    var nsl = createActionLink(browserObj().i18n.getMessage("sites_sortCmd"));
     nsl.addEventListener("click", function(e) {
         tg = e.target;
         if (tg.classList.contains("sort_asc")) {
@@ -217,7 +217,7 @@ function makeSortable(table) {
     ns.appendChild(nsl);
     
     var ds = document.createElement("th");
-    var dsl = createActionLink(browser.i18n.getMessage("sites_sortCmd"));
+    var dsl = createActionLink(browserObj().i18n.getMessage("sites_sortCmd"));
     dsl.addEventListener("click", function(e) {
         tg = e.target;
         if (tg.classList.contains("sort_asc")) {
@@ -322,4 +322,4 @@ function useOptions( options ) {
         makeGlobalSortable();
     }
 }
-browser.storage.local.get().then( useOptions, log );
+loadOptions( useOptions );

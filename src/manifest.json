@@ -12,15 +12,15 @@
     "content_scripts": [
         {
             "matches": [ "*://www.stellwerksim.de/*", "*://doku.stellwerksim.de/*" ],
-            "js": [ "general.js" ]
+            "js": [ "tools.js", "general.js" ]
         },
         {
             "matches": [ "*://www.stellwerksim.de/anlagen.php*" ],
-            "js": [ "anlagen.js" ]
+            "js": [ "tools.js", "anlagen.js" ]
         },
         {
             "matches": [ "*://www.stellwerksim.de/spieleabend.php*" ],
-            "js": [ "spieleabend.js" ]
+            "js": [ "tools.js", "spieleabend.js" ]
         }
     ],
     
@@ -28,7 +28,7 @@
         "page": "options.html"
     },
     
-    "permissions": [ "storage" ],
+    "permissions": [ "storage", "activeTab" ],
     
     "applications": {
         "gecko": {

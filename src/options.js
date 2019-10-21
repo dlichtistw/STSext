@@ -57,9 +57,16 @@ function restoreOptions() {
         document.querySelector("#gameNightRegistration").checked = result.gameNightRegistration;
         document.querySelector("#rewriteDownload").checked = result.rewriteDownload;
         document.querySelector("#appeaseDownloadButton").checked = result.appeaseDownloadButton;
-        document.querySelector("#shortenDelays").checked = result.shortenDelays;
-        document.querySelector("#delayShow").value = result.delayShow;
-        document.querySelector("#delayHide").value = result.delayHide;
+
+        if ( browserType() == "chrome" ) {
+            document.querySelector("#shortenDelays").disabled = true;
+            document.querySelector("#delayShow").disabled = true;
+            document.querySelector("#delayHide").disabled = true;
+        } else {
+            document.querySelector("#shortenDelays").checked = result.shortenDelays;
+            document.querySelector("#delayShow").value = result.delayShow;
+            document.querySelector("#delayHide").value = result.delayHide;
+        }
     }
 
     return loadOptions( setConfig );
