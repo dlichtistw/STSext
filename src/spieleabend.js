@@ -16,13 +16,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 /*
- * Write some text to the console log.
- */
-function log(t) {
-    return console.log(`[STSext] ${t}`);
-}
-
-/*
  * Add direct links to the site's description pages in game night registration lists.
  */
 function addSiteLinks() {
