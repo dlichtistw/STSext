@@ -3,6 +3,10 @@
         "stsext@dlichtistw":  {
             "updates": [
                 {
+                    "version": "0.6.3",
+                    "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.6.3-fx.xpi"
+                },
+                {
                     "version": "0.6.2",
                     "update_link": "https://github.com/dlichtistw/STSext/raw/master/packages/sts_extensions-0.6.2-fx.xpi"
                 },
