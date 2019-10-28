@@ -312,7 +312,8 @@ function useOptions( options ) {
     log( "Using options." );
     if ( options.globalOverview ) {
         addOverview();
-        makeGlobalSortable();
+        if( browserType() != "chrome" )
+            makeGlobalSortable();
     }
 }
 loadOptions( useOptions );
